@@ -14,7 +14,7 @@ public class ApiModelClass
     init(URL:String)
     {
         self.URLString = URL
-    }//AIzaSyAyT3AvRfrkfc9zieHd8NkTv16O5ftN-4c
+    }
 
     public func getweatherData()
     {
