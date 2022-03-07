@@ -11,7 +11,7 @@ public class ApiModelClass
 {
     public var URLString : String?
     
-    init(URL:String)
+    public init(URL:String)
     {
         self.URLString = URL
     }
