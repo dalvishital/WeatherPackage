@@ -16,7 +16,7 @@ public class ApiModelClass
         self.URLString = URL
     }
 
-    public func getweatherData()
+    public func getweatherData()->String
     {
         URLSession.shared.dataTask(with: URL(string: self.URLString!)!) { Data, response, error in
             if error == nil && Data?.count != 0 && response != nil
@@ -31,6 +31,7 @@ public class ApiModelClass
                 }
             }
         }.resume()
+        return "Yes"
     }
 }
 //https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=60.99&lon=30.9&dt=1586468027&appid=AIzaSyAyT3AvRfrkfc9zieHd8NkTv16O5ftN-4c
