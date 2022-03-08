@@ -24,7 +24,7 @@ public class ApiModelClass
                 let decoder = JSONDecoder()
                 do{
                     let result = try decoder.decode(ApiResponse.self, from: Data!)
-                    print(result.id)
+                    print(result)
                 }catch
                 {
                     
@@ -33,5 +33,6 @@ public class ApiModelClass
         }.resume()
     }
 }
-//https://api.openweathermap.org/data/2.5/onecall/timemachine?lat=60.99&lon=30.9&dt=1586468027&appid=AIzaSyAyT3AvRfrkfc9zieHd8NkTv16O5ftN-4c
 
+
+//https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=current,daily&appid=5444f314a00622bd7493db14d571c2a0
