@@ -10,12 +10,12 @@ import Foundation
 
 
 
-struct ApiResponse: Codable {
-    let lat, lon: Double
-    let timezone: String
-    let timezoneOffset: Int
-    let current: Current
-    let minutely: [Minutely]
+public struct ApiResponse: Codable {
+    public let lat, lon: Double
+    public let timezone: String
+    public let timezoneOffset: Int
+    public let current: Current
+    public let minutely: [Minutely]
 
     enum CodingKeys: String, CodingKey {
         case lat, lon, timezone
@@ -25,16 +25,16 @@ struct ApiResponse: Codable {
 }
 
 // MARK: - Current
-struct Current: Codable {
-    let dt, sunrise, sunset: Int
-    let temp, feelsLike: Double
-    let pressure, humidity: Int
-    let dewPoint, uvi: Double
-    let clouds, visibility: Int
-    let windSpeed: Double
-    let windDeg: Int
-    let weather: [Weather]
-    let rain: Rain
+public struct Current: Codable {
+    public let dt, sunrise, sunset: Int
+    public let temp, feelsLike: Double
+    public let pressure, humidity: Int
+    public let dewPoint, uvi: Double
+    public let clouds, visibility: Int
+    public let windSpeed: Double
+    public let windDeg: Int
+    public let weather: [Weather]
+    public let rain: Rain
 
     enum CodingKeys: String, CodingKey {
         case dt, sunrise, sunset, temp
@@ -49,8 +49,8 @@ struct Current: Codable {
 }
 
 // MARK: - Rain
-struct Rain: Codable {
-    let the1H: Double
+public struct Rain: Codable {
+    public let the1H: Double
 
     enum CodingKeys: String, CodingKey {
         case the1H = "1h"
@@ -58,9 +58,9 @@ struct Rain: Codable {
 }
 
 // MARK: - Weather
-struct Weather: Codable {
-    let id: Int
-    let main, weatherDescription, icon: String
+public struct Weather: Codable {
+    public let id: Int
+    public let main, weatherDescription, icon: String
 
     enum CodingKeys: String, CodingKey {
         case id, main
@@ -70,7 +70,7 @@ struct Weather: Codable {
 }
 
 // MARK: - Minutely
-struct Minutely: Codable {
-    let dt: Int
-    let precipitation: Double
+public struct Minutely: Codable {
+    public let dt: Int
+    public let precipitation: Double
 }
